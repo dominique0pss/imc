@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+ <head>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+ </head>
+
+ <body>
+<h1>calcular</h1>
+
+  <div class="formulario">
+
+    <form action="">
+        <label for="altura">Altura: </label>
+        <input type="number" name="" id="altura">
+        <br> <br>
+
+        <label for="peso">Peso (Kg)</label>
+        <input type="number" name="" id="peso" maxlength="5">
+        <br> <br>
+
+        <button onclick="calcularImc()">calcular imc</button>
+        <br><br>
+            <p>seu indice de massa corporal é: <span id="resultado"></span></p>
+            <br><br>
+            <p>classificação: <span id="mensagem"></span></p>
+    </form>
+   </div>
+    <script>
+        function calcularImc() {
+            const peso = document.getElementById('peso').value;
+            const altura = document.getElementById('altura').value;
+            const imc = peso / (altura ** 2);
+            document.getElementById('resultado').textContent = imc.toFixed(2);
+            var classificação = "";
+
+            if (imc < 18) {
+                classificação = "magreza";
+            }
+            if (imc > 18) {
+                classificação = "normal";
+            }
+            if (imc > 25) {
+                classificação = "sobre peso";
+            }
+            if (imc > 30) {
+                classificação = "obesidade";
+            }
+            if (imc >= 40) {
+                classificação = "obesidade grave";
+            } document.getElementById("mensagem").textContent = classificação;
+
+        }
+    </script>
+
+
+
+
+
+
+<div class="td">
+    <a href="">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    cuide
+    </a>
+    
+    <a href=""
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    sua
+    </a>
+    
+    
+    
+    <a href=""
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    saúde
+    </a>
+    
+    
+    
+      
+    </div>
+ </body>
+
+</html>
